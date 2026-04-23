@@ -1,0 +1,55 @@
+package com.smartcampus.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Room {
+    private String id;
+    private String name;
+    private int capacity;
+    private List<Link> _links = new ArrayList<>();
+
+    public Room() {}
+
+    public Room(String id, String name, int capacity) {
+        this.id = id;
+        this.name = name;
+        this.capacity = capacity;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public List<Link> getLinks() {
+        return _links;
+    }
+
+    public void setLinks(List<Link> _links) {
+        this._links = _links;
+    }
+
+    public void addLink(String rel, String href) {
+        this._links.add(new Link(rel, href));
+    }
+}
