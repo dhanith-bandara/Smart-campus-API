@@ -205,5 +205,10 @@ Why is it advantageous to use JAX-RS filters for cross-cutting concerns like
 logging, rather than manually inserting Logger.info() statements inside every single re-
 source method?
 
+
+
 Filtering gives preserves a consistent and centralized logging throughout the API.
 Pros: It complies with the DRY (Don't Repeat Yourself) principle. Should you require altering the logging format or adding additional metadata (such as request IDs), you simply need to modify it in a single location. Manual logging is not only prone to errors, but also pollutes the business logic with boilerplate code and can result in forgetting to log new endpoints.
+
+
+Demo Video Link: https://drive.google.com/drive/folders/1Fiil-h3vMThZZu_qS60esIrPdni4enkh
